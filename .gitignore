@@ -1,10 +1,13 @@
-HELP.md
+# Ignore build directories
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+build/
 
-### STS ###
+# Ignore IntelliJ, VS Code, STS, and NetBeans IDE files
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
 .apt_generated
 .classpath
 .factorypath
@@ -12,22 +15,42 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# Ignore environment variable files and sensitive configs
+.env
+.env.local
+.env.*.local
+src/main/resources/application-secret.properties
+
+# Ignore logs and temporary files
+logs/
+*.log
+log/
+debug.log
+error.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+
+# Ignore compiled Java classes and JARs
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore database files
+*.h2.db
+*.mv.db
+*.sqlite
+*.db
+
+# Ignore Maven wrapper logs
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
